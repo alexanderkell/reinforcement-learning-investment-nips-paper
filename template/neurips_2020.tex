@@ -86,7 +86,18 @@ A transition from a high carbon electricity supply to a low-carbon system is cen
 
 Renewable energy costs, such as solar and wind sources, have dropped in price making them cost competitive with fossil fuels. This is projected to continue into the future \cite{IEA2015}. The future cost of generation, demand and fuel prices, however, remain uncertain over the long-term future. These uncertainties are risks which investors must analyse while making long-term investment decisions.
 
-In this paper, we use the deep deterministic policy gradient reinforcement learning algorithm to simulate the behaviour of investors over a 40-year horizon \cite{Hunt2016a}. The environment used was a modified version of the global FTT:Power model \cite{Mercure2012}.
+In this paper, we use the deep deterministic policy gradient (DDPG) reinforcement learning algorithm to simulate the behaviour of investors over a 50-year horizon \cite{Hunt2016a}. The environment used was a modified version of the FTT:Power model \cite{Mercure2012}. FTT:Power is a global power systems model that uses logistic differential equations to simulate technology switching. 
+
+We modified the FTT:Power model to use the DDPG algorithm in place of the logistic differential equations to simulate investment decisions, as well as only simulating two countries: the United Kingdom and Ireland. The DDPG algorithm allowed us to simulate the decisions made by investors made under imperfect information over a 50-year period. That is, they did not have knowledge of future demand, fuel and generation costs. 
+
+The reinforcement learning algorithm enabled us to model the behaviour of an investor without perfect knowledge of the future, with a view to reduce carbon emissions and overall cost of the system. The reinforcement learning agent is a single actor that invests in both the UK and Ireland. This work enabled us to see whether a low-carbon mix is possible over the next 50-years to avert climate change.
+
+Through this work, it is possible to assess whether a low cost, low-carbon electricity mix is viable over the long-term using a deep reinforcement learning investment algorithm. Our approach is in contrast to a mixed-integer linear programming problem, where full knowledge of the time-horizon is required.
+
+
+
+
+
 
 \begin{itemize}
 	\item Requirement to reduce carbon emissions globally.
