@@ -4,45 +4,45 @@ The top-level auxiliary file: /Users/alexanderkell/Documents/PhD/Papers/9-ftt-po
 The style file: ieeetr.bst
 Database file #1: library.bib
 Warning--empty journal in IEA2015
-You've used 4 entries,
+You've used 6 entries,
             1876 wiz_defined-function locations,
-            503 strings with 4418 characters,
-and the built_in function-call counts, 911 in all, are:
-= -- 80
-> -- 42
+            520 strings with 4847 characters,
+and the built_in function-call counts, 1626 in all, are:
+= -- 161
+> -- 61
 < -- 0
-+ -- 16
-- -- 12
-* -- 62
-:= -- 145
-add.period$ -- 4
-call.type$ -- 4
-change.case$ -- 4
++ -- 23
+- -- 17
+* -- 113
+:= -- 237
+add.period$ -- 6
+call.type$ -- 6
+change.case$ -- 6
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 50
-empty$ -- 86
-format.name$ -- 12
-if$ -- 214
+cite$ -- 7
+duplicate$ -- 86
+empty$ -- 149
+format.name$ -- 17
+if$ -- 392
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 15
-num.names$ -- 4
-pop$ -- 16
+int.to.str$ -- 6
+missing$ -- 6
+newline$ -- 21
+num.names$ -- 6
+pop$ -- 18
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 26
+skip$ -- 58
 stack$ -- 0
-substring$ -- 38
-swap$ -- 17
+substring$ -- 110
+swap$ -- 37
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 8
-width$ -- 5
-write$ -- 36
+while$ -- 16
+width$ -- 7
+write$ -- 58
 (There was 1 warning)
