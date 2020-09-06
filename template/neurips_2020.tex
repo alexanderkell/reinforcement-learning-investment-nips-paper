@@ -27,7 +27,7 @@
 \usepackage{microtype}      % microtypography
 \usepackage{chemformula}
 
-\title{Deep Reinforcement Learning to Minimize Long-Term Carbon Emissions and Cost}
+\title{Deep Reinforcement Learning to Minimize Long-Term Carbon Emissions and Cost in Electricity Generation Investment}
 
 % The \author macro works with any number of authors. There are two commands
 % used to separate the names and addresses of multiple authors: \And and \AND.
@@ -99,7 +99,7 @@ The reinforcement learning algorithm enabled us to model the behaviour of an inv
 
 Through this work, it is possible to assess whether a low cost, low-carbon electricity mix is viable over the long-term using a deep reinforcement learning investment algorithm. Our approach is in contrast to a mixed-integer linear programming problem, where full knowledge of the time-horizon is required.
 
-Oliveira \textit{et al.} also use reinforcement learning for the capacity expansion problem~\cite{Oliveira2018}. They, however, focus on a 20-year time horizon. Kazempour \textit{et al.} use a mixed integer linear programming approach to solve the generation investment problem \cite{Kazempour2011}.
+Oliveira \textit{et al.} also use reinforcement learning for the capacity expansion problem~\cite{Oliveira2018}. They, however, focus on a 20-year time horizon. Kazempour \textit{et al.} use a mixed integer linear programming approach to solve the generation investment problem \cite{Kazempour2011}. In this work, we address a gap in the literature for the capacity expansion problem over a 60 year time period using deep reinforcement learning to reduce both carbon emissions and electricity price.
 
 
 
@@ -176,11 +176,57 @@ We applied the deep deterministic policy gradient (DDPG) DRL algorithm \cite{Hun
 \label{sec:results}
 
 
-\begin{figure*}
-\includegraphics[width=0.8\columnwidth]{figures/electricity_generated_plot.pdf}
-\label{fig:electricity_generated_plot}
-\caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
-\end{figure*}
+%\begin{figure*}
+%\includegraphics[width=0.8\columnwidth]{figures/electricity_generated_plot.pdf}
+%\label{fig:electricity_generated_plot}
+%\caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\end{figure*}
+%
+%\begin{figure*}
+%\includegraphics[width=0.8\columnwidth]{figures/emissions_plot.pdf}
+%\label{fig:electricity_generated_plot}
+%\caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
+%\end{figure*}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/electricity_generated_plot.pdf}
+  \caption{Electricity mix.}
+  \label{fig:electricity_generated_plot}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/emissions_plot.pdf}
+  \caption{Carbon emissions.}
+  \label{fig:emissions_plot}
+\end{minipage}
+\caption{Simulation metrics over runtime}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/runtime_steps_plot.pdf}
+  \caption{Number of steps.}
+  \label{fig:electricity_generated_plot}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/runtime_days_plot.pdf}
+  \caption{Number of days.}
+  \label{fig:emissions_plot}
+\end{minipage}
+\caption{Mean, minimum and maximum rewards over run time.}
+\end{figure}
+
+
+
+
 
 \begin{itemize}
 	\item Display electricity mix over time-horizon
