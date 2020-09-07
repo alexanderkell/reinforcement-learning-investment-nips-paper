@@ -27,7 +27,7 @@
 \usepackage{microtype}      % microtypography
 \usepackage{chemformula}
 
-\title{Deep Reinforcement Learning to Minimize Long-Term Carbon Emissions and Cost in Electricity Generation Investment}
+\title{Deep Reinforcement Learning to Minimize Long-Term Carbon Emissions and Cost in the Investment of Electricity Generation}
 
 % The \author macro works with any number of authors. There are two commands
 % used to separate the names and addresses of multiple authors: \And and \AND.
@@ -74,9 +74,7 @@
 
 \begin{abstract}
 
-{\color{red}Placeholder}: A transition from a high carbon electricity supply to a low-carbon system is central to avoiding catastrophic climate change \cite{Kell2020}. Much of the work in decarbonisation relies on a low-carbon electricity supply, such as cooling, heating and automotive, amongst others. Such a transition must be made in a gradual approach to avoid frequent collapse of the electricity supply.
-
-Renewable energy costs, such as solar and wind sources, have dropped in price making them cost competitive with fossil fuels. This is projected to continue into the future \cite{IEA2015}. The future cost of generation, demand and fuel prices, however, remain uncertain over the long-term future. These uncertainties are risks which investors must analyse while making long-term investment decisions.
+Placeholder
 
 \end{abstract}
 
@@ -89,19 +87,17 @@ Renewable energy costs, such as solar and wind sources, have dropped in price ma
 
 A transition from a high carbon electricity supply to a low-carbon system is central to avoiding catastrophic climate change \cite{Kell2020}. Much of the work in decarbonisation relies on a low-carbon electricity supply, such as cooling, heating and automotive, amongst others. Such a transition must be made in a gradual approach to avoid frequent collapse of the electricity supply.
 
-Renewable energy costs, such as solar and wind sources, have dropped in price making them cost competitive with fossil fuels. This is projected to continue into the future \cite{IEA2015}. The future cost of generation, demand and fuel prices, however, remain uncertain over the long-term future. These uncertainties are risks which investors must analyse while making long-term investment decisions.
+Renewable energy costs, such as solar and wind energy have dropped in price making them cost competitive with fossil fuels. This is projected to continue into the future \cite{IEA2015}. The future cost of generation, demand and fuel prices, however, remain uncertain over the long-term future. These uncertainties are risks which investors must analyse while making long-term investment decisions.
 
 In this paper, we use the deep deterministic policy gradient (DDPG) reinforcement learning algorithm to simulate the behaviour of investors over a 50-year horizon \cite{Hunt2016a}. The environment used was a modified version of the FTT:Power model \cite{Mercure2012}. FTT:Power is a global power systems model that uses logistic differential equations to simulate technology switching. 
 
-We modified the FTT:Power model to use the DDPG algorithm in place of the logistic differential equations to simulate investment decisions, as well as only simulating two countries: the United Kingdom and Ireland. The DDPG algorithm allowed us to simulate the decisions made by investors made under imperfect information over a 50-year period. That is, they did not have knowledge of future demand, fuel and generation costs. 
+We modified the FTT:Power model to use the DDPG algorithm in place of the logistic differential equations to simulate investment decisions. In addition to this, we only simulated two countries: the United Kingdom and Ireland. The DDPG algorithm allowed us to simulate the decisions made by investors under imperfect information over a 50-year period. 
 
 The reinforcement learning algorithm enabled us to model the behaviour of an investor without perfect knowledge of the future, with a view to reduce carbon emissions and overall cost of the system. The reinforcement learning agent is a single actor that invests in both the UK and Ireland. This work enabled us to see whether a low-carbon mix is possible over the next 50-years to avert climate change.
 
-Through this work, it is possible to assess whether a low cost, low-carbon electricity mix is viable over the long-term using a deep reinforcement learning investment algorithm. Our approach is in contrast to a mixed-integer linear programming problem, where full knowledge of the time-horizon is required.
-
 Oliveira \textit{et al.} also use reinforcement learning for the capacity expansion problem~\cite{Oliveira2018}. They, however, focus on a 20-year time horizon. Kazempour \textit{et al.} use a mixed integer linear programming approach to solve the generation investment problem \cite{Kazempour2011}. In this work, we address a gap in the literature for the capacity expansion problem over a 60 year time period using deep reinforcement learning to reduce both carbon emissions and electricity price.
 
-
+Through this work, it is possible to assess whether a low cost, low-carbon electricity mix is viable over the long-term using a deep reinforcement learning investment algorithm. Our approach is in contrast to a mixed-integer linear programming problem, where full knowledge of the time-horizon is required. This work enables us to closely match the investment behaviour of rational agents, without a knowledge of the future. It can help guide investors on which technologies to invest in over the long-term, as well as the proportions to invest in.
 
 
 %\begin{itemize}
@@ -188,55 +184,82 @@ We applied the deep deterministic policy gradient (DDPG) DRL algorithm \cite{Hun
 %\caption{Mean outputs of various technologies vs. mean absolute error from 2018 to 2035 in ElecSim.}
 %\end{figure*}
 
-\begin{figure}
+Our results show that our investment agent is able to increase its reward over time, as shown by Figure \ref{fig:days_reward_plot}. A total of ${\sim}$400,000 steps were required to see a levelling off in reward. The total time taken to simulate ${\sim}$400,000 steps was ${\sim}$8 days. We stopped the training and simulation after this time due to diminishing returns and the cost of computation.
+
+Figure \ref{fig:electricity_generated_plot} displays the results of reinforcement learning algorithm. Before the black vertical line, the investments made are based upon historical data used by FTT:Power. The reinforcement learning algorithm starts to make investments after the black vertical line. 
+
+
+The historical electricity mix before 2017 are largely based on the fossil fuels: coal, combined cycle gas turbine (CCGT) and oil. Additionally, nuclear is a major component of the electricity mix before 2009. After reinforcement learning optimizes for LCOE and carbon emissions a rapid transition occurs from fossil fuel and nuclear to renewable energy. 
+
+\begin{figure}[h]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/electricity_generated_plot.pdf}
-  \caption{Electricity mix.}
-  \label{fig:electricity_generated_plot}
+  \includegraphics[width=\linewidth]{figures/runtime_steps_plot.pdf}
+  \caption{Mean, minimum and maximum rewards over run time.}
+  \label{fig:days_reward_plot}
 \end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/electricity_generated_plot.pdf}
+  \caption{Electricity mix over time.}
+  \label{fig:electricity_generated_plot}
+\end{minipage}
+\end{figure}
+
+The primary source of energy after the reinforcement learning algorithm begins is offshore, followed by onshore, solar photovoltaics (PV) and wave. As can be seen by Figure \ref{fig:emissions_plot}, the carbon emissions reduce significantly at the time that the reinforcement learning algorithm begins to control investments. 
+
+This mix of renewable electricity generation across Ireland and the UK allows for demand to be met during the quarter year time periods of the model. The demand scenario is shown by Figure \ref{fig:demand_scenario}, where the demand can be seen to closely match the electricity mix shown by Figure \ref{fig:electricity_generated_plot}.
+
+
+
+
+
+
+\begin{figure}
+\centering
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/emissions_plot.pdf}
   \caption{Carbon emissions.}
   \label{fig:emissions_plot}
-\end{minipage}
-\caption{Simulation metrics over runtime}
-\end{figure}
-
-
-
-\begin{figure}
-\centering
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{figures/demand_plot.pdf}
-  \caption{Demand of scenario.}
-  \label{fig:steps_reward_plot}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/runtime_days_plot.pdf}
-  \caption{Mean, minimum and maximum rewards over run time.}
-  \label{fig:days_reward_plot}
+  \includegraphics[width=\linewidth]{figures/demand_plot.pdf}
+  \caption{Demand scenario over simulation.}
+  \label{fig:demand_scenario}
 \end{minipage}
-\caption{}
 \end{figure}
 
 
 
 
 
-\begin{itemize}
-	\item Display electricity mix over time-horizon
-	\item Investment in solar, offshore, onshore and wave
-	\item Visualise carbon emissions and electricity price over time
-	\item Discuss these results and detail 
-\end{itemize}
+%\begin{itemize}
+%	\item Display electricity mix over time-horizon
+%	\item Investment in solar, offshore, onshore and wave
+%	\item Visualise carbon emissions and electricity price over time
+%	\item Discuss these results and detail 
+%\end{itemize}
 
 
-%\section*{References}
+\section{Discussion}
+
+A transition from a high carbon emitting electricity grid to a low-carbon system is required. In order to achieve this, investments in electricity generators must be made under uncertainty of the future. In this paper, we have modelled a central agent which makes investment decisions in an uncertain environment the reinforcement learning algorithm, DDPG. This environment is modelled using FTT:Power.
+
+Through this exercise, we are able to see the optimal electricity mix in the UK and Ireland. We found that a mixture of renewable sources such as wind, solar and wave power would meet demand at quarter year intervals, as well as providing a cost-effective and low-carbon system.
+
+The limitations of this work is the fact that the investment algorithm does not take into account money owned and owed by the central decision making agent. It is for this reason that the reinforcement learning algorithm is able to make such a large transition in 2017. However, we believe that the investment algorithm is able to find a general solution to the problem of investing in a cost-efficient and low-carbon system.
+
+In future work, we would like to increase the number of steps of the FTT:Power model to more adequately model the investment behaviour introduced by the reinforcement learning algorithm. In addition, an increase in the number of countries modelled would enable us to see a global picture of how different, interdependent regions may evolve in a new climate of a requirement of low-carbon emissions.
+
+
+
+
+
+
+
 
 \bibliographystyle{ieeetr}
 \bibliography{library,ftt-power-custom}
