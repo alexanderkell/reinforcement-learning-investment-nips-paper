@@ -76,7 +76,7 @@
 
 A transition from a high-carbon emitting electricity power system to one based on renewables would aid in the mitigation of climate change. Decarbonization of the electricity grid would allow for low-carbon heating, cooling and transport. Investments in renewable energy, however, must be made over a long time horizon, with various uncertainties in future electricity demand and costs to consumers and investors. 
 
-To account for imperfect information of the future, we use the deep deterministic policy gradient (DDPG) deep reinforcement learning approach to optimize for a low-cost, low-carbon electricity supply using a modified version of the FTT:Power model. The DDPG algorithm is able to learn the optimum electricity mix through experience and achieves this between the years of 2017 and 2050. We find that a transition from fossil fuels and nuclear power to renewables, based upon wind, solar and wave would provide a cheap and low-carbon alternative.
+To account for imperfect information of the future, we use the deep deterministic policy gradient (DDPG) deep reinforcement learning approach to optimize for a low-cost, low-carbon electricity supply using a modified version of the FTT:Power model. In this work, we model the UK and Ireland markets. The DDPG algorithm is able to learn the optimum electricity mix through experience and achieves this between the years of 2017 and 2050. We find that a transition from fossil fuels and nuclear power to renewables, based upon wind, solar and wave would provide a cheap and low-carbon alternative.
 
 \end{abstract}
 
@@ -89,17 +89,19 @@ To account for imperfect information of the future, we use the deep deterministi
 
 A transition from a high carbon electricity supply to a low-carbon system is central to avoiding catastrophic climate change \cite{Kell2020}. A low-carbon electricity supply will aid in the decarbonization of the automotive and heating sectors. Such a transition must be made in a gradual approach to maintain grid reliability \cite{Kahrl2011}.
 
-Renewable energy costs, such as solar and wind energy, have dropped recently, making them cost-competitive with fossil fuels. These price drops are projected to continue \cite{IEA2015}. The future cost of generation, demand and fuel prices, however, remain uncertain over the long-term future. These uncertainties are risks which investors must analyze while making long-term investment decisions.
+Renewable energy costs, such as solar and wind energy, have reduced over the last ten years, making them cost-competitive with fossil fuels. These price drops are projected to continue \cite{IEA2015}. The future cost of generation, demand and fuel prices, however, remain uncertain over the long-term future. These uncertainties are risks which investors must analyze while making long-term decisions.
 
-In this paper, we use the deep deterministic policy gradient (DDPG) reinforcement learning algorithm to simulate the behaviour of investors over a 33-year horizon, between 2017 and 2050 \cite{Hunt2016a}. We started in the year 2017 due to the prior parameterization of the FTT:Power model. We projected until 2050 due to the fact that this is a frequent target for governments to reach zero carbon. The environment used was a modified version of the FTT:Power model \cite{Mercure2012}. FTT:Power is a global power systems model that uses logistic differential equations to simulate technology switching. 
+In this paper, we use the deep deterministic policy gradient (DDPG) reinforcement learning algorithm to simulate the behaviour of investors over a 33-year horizon, between 2017 and 2050 \cite{Hunt2016a}. The model is parameterized and begins in 2007, however, the investment decisions begin in 2017. We begin in these years due to the prior parameterization of the FTT:Power model with historical data up until this time. We projected until 2050 due to the fact that this is a frequent target for governments to reach zero carbon. The environment used was a modified version of the FTT:Power model \cite{Mercure2012}. FTT:Power is a global power systems model that uses logistic differential equations to simulate technology switching. 
 
-We modified the FTT:Power model to use the DDPG algorithm in place of the logistic differential equations to simulate investment decisions. In addition to this, we simulated two countries: the United Kingdom and Ireland. This was achieved through the use of the same FTT:Power model. We choose these due to the wealth of prior work on these countries which we can use for comparison \cite{Hall2016, Hughes2010}. The DDPG algorithm allows us to simulate the decisions made by investors under imperfect information over a 33-year period. This work enabled us to see whether a low-carbon mix is possible over the next 33-years to avert climate change. 
+We modified the FTT:Power model to use the DDPG algorithm in place of the logistic differential equations to simulate investment decisions. In addition to this, we simulated two countries: the United Kingdom and Ireland. This was achieved through the use of the same FTT:Power model. We choose these due to the wealth of prior work on these countries which we can use for comparison \cite{Hall2016, Hughes2010}. The DDPG algorithm allows us to simulate the decisions made by investors under imperfect information, such as future electricity costs, taxes and demand. This work enabled us to see whether a low-carbon mix is possible over the next 33-years to avert climate change. 
 
 %The reinforcement learning algorithm enabled us to model the behaviour of an investor without perfect knowledge of the future, with a view to reducing carbon emissions and the overall cost of the system. The reinforcement learning agent is a single actor that invests in both the UK and Ireland. This work enabled us to see whether a low-carbon mix is possible over the next 33-years to avert climate change.
 
-Prior work in this domain has tackled the capacity expansion problem. For example, Oliveira \textit{et al.} also use reinforcement learning for the capacity expansion problem~\cite{Oliveira2018}. They, however, focus on a 20-year time horizon. Kazempour \textit{et al.} use a mixed integer linear programming approach to solve the generation investment problem \cite{Kazempour2011}. Our approach is in contrast to a mixed-integer linear programming problem, where full knowledge of the time-horizon is required. In our work, we address a gap in the literature for the capacity expansion problem over a 33 year time period using deep reinforcement learning to reduce both carbon emissions and electricity price. 
+Prior work in this domain has tackled the capacity expansion problem. For example, Oliveira \textit{et al.} also use reinforcement learning for the capacity expansion problem~\cite{Oliveira2018}. Whilst Oliveria \textit{et al.} provide detailed calculations of agents for the capacity expansion problem, we reduce this complexity to a series of observations of the environment, to allow for an emergent behaviour. 
 
-Through this work, it is possible to assess whether a low cost, low-carbon electricity mix is viable over the long-term using a deep reinforcement learning investment algorithm, as well as finding what this optimum mix should be. This work enables us to closely match the investment behaviour of rational agents, without knowledge of the future. It can help guide investors on which technologies to invest in over the long-term, as well as the proportions to invest in.
+Kazempour \textit{et al.} use a mixed integer linear programming approach to solve the generation investment problem \cite{Kazempour2011}. Our approach is in contrast to a mixed-integer linear programming problem, where full knowledge of the time-horizon is required. In our work, we address a gap in the literature for the capacity expansion problem over a 33 year time period using deep reinforcement learning to reduce both carbon emissions and electricity price. 
+
+Through this work, it is possible to assess whether a low cost, low-carbon electricity mix is viable over the long-term using a deep reinforcement learning investment algorithm, as well as finding what this optimum mix should be. This work enables us to closely match the investment behaviour of rational agents, without knowledge of the future. It can help guide investors on which technologies to invest in over the long-term, as well as the proportions to invest.
 
 
 %\begin{itemize}
@@ -116,9 +118,9 @@ Through this work, it is possible to assess whether a low cost, low-carbon elect
 \label{sec:methods}
 
 
-In this paper, we used the Future Technology Transformations for the power sector model (FTT:Power) \cite{Mercure2012}. This model represents global power systems based on market competition, induced technological change and natural resource use and depletion. Induced technological change occurs through technological learning produced by cumulative investment and leads to nonlinear path dependent technological transitions \cite{Mercure2012}. The model uses a dynamic set of logistic differential equations for competition between technology options.
+In this paper, we used the Future Technology Transformations for the power sector model (FTT:Power) \cite{Mercure2012}. This model represents global power systems based on market competition, induced technological change and natural resource use and depletion. This technological change is dependent on previous cumulative investment \cite{Mercure2012}. The model uses a dynamic set of logistic differential equations for competition between technology options.
 
-For this work we modified the FTT:Power model to use the deep reinforcement learning investment algorithm, DDPG. That is, the size of the investment made in each technology was made by the DDPG algorithm. In addition, we reduced the model to only consider the countries of Ireland and the UK. This enabled us to iterate through enough episodes for the reinforcement learning to converge to an optimal reward. With more time, however, it would be possible to undertake this optimisation for the whole world.
+For this work, we modified the FTT:Power model to use the deep reinforcement learning investment algorithm, DDPG. That is, the size of the investment made in each technology was made by the DDPG algorithm. In addition, we reduced the model to only consider the countries of Ireland and the UK. This enabled us to iterate through enough episodes for the reinforcement learning to converge to an optimal reward. With more time, however, it would be possible to undertake this optimisation for the whole world.
 
 \subsection*{Reinforcement Learning}
 
@@ -138,9 +140,9 @@ The reward $r$ is defined as:
 where $\ch{CO2}_e$ is equal to total \ch{CO2} emissions over the simulation The LCOE is calculated without taxes. The scaling factors are used to place the $LCOE$ and $\ch{CO2}$ on the same scale. The reward was multiplied by -1 due to the RL algorithm maximizing reward and our requirement to reduce both LCOE and \ch{CO2} emissions.
 
 
-RL approaches have been used to solve MDP \cite{Sutton2015}. In recent times, however, RL has been extended to incorporate Deep Reinforcement Learning (DRL). DRL relies on deep neural networks to overcome the problems of memory complexity and computational complexity \cite{Arulkumaran2017}. 
+RL approaches have been used to solve MDP through a trial and error based approach \cite{Sutton2015}. In recent times RL has been extended to incorporate Deep Reinforcement Learning (DRL). DRL relies on deep neural networks to overcome the problems of memory and computational complexity \cite{Arulkumaran2017}. 
 
-We applied the deep deterministic policy gradient (DDPG) DRL algorithm \cite{Hunt2016a} from the Ray RLlib package \cite{Liang2014}. The DDPG algorithm is made up of an actor and critic network. We designed both of these to have two hidden layers, made up of 400 and 300 units per layer. The training batch size was set to 40,000. We chose these parameters as they were the default implementation in Ray RLlib. We trialled a variety of different configurations for number of neurons per layer. To increase speed of computation, we reduced the simulation to run from 2007 to 2017. We chose this number as it would allow for a transition in electricity mix. However, we found that the approach worked well irrespective of parameter choice, as shown by Figure \ref{fig:hyperparameter_training}. 
+We applied the deep deterministic policy gradient (DDPG) DRL algorithm \cite{Hunt2016a} from the Ray RLlib package \cite{Liang2014}. The DDPG algorithm is made up of an actor and critic network. We designed both of these to have two hidden layers, made up of 400 and 300 units per layer. The training batch size was set to 40,000. We chose these parameters as they were the default implementation in Ray RLlib. We trialled a variety of different configurations for number of neurons per layer. To increase speed of computation, we reduced the simulation to run from 2007 to 2017. We chose this number as it would allow for a transition in electricity mix. However, we found that the approach worked well. We trialled the use of two and three layers, as well as varying permutations of 300, 400 and 500 neurons.
 
 
 
@@ -214,15 +216,15 @@ This rapid transition occurs due to the reinforcement learning algorithm not tak
 %The speed of the uptake of technology adoption in FTT:Power depends on investors' preferences (Fij), the timeframes embedded in the matrix Aij (A(i,j,k) in the original code) and the technical constraints (FF, Gmax and Gmin). These elements are explicitly incorporated in the Shares equation (dSij(i,j,k)). It seems all those constraints are no longer embedded in the reinforcing learning algorithm, and that is probably the reason for having very rapid transitions. I am not familiar with the way your algorithm works, so I cannot advise you on the details. But you could potentially incorporate the aforementioned elements into the algorithm, as a proxy for adoption rate limits.
 
 
-\begin{figure}[h]
+\begin{figure}
 \centering
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.4\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/runtime_steps_plot.pdf}
   \caption{Mean, minimum and maximum rewards over run time.}
   \label{fig:days_reward_plot}
 \end{minipage}%
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.4\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/electricity_generated_plot.pdf}
   \caption{Electricity mix over time.}
@@ -239,15 +241,15 @@ This mix of renewable electricity generation across Ireland and the UK allows fo
 
 
 
-\begin{figure}[h]
+\begin{figure}
 \centering
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.4\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/emissions_plot.pdf}
   \caption{Carbon emissions.}
   \label{fig:emissions_plot}
 \end{minipage}%
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.4\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/demand_plot.pdf}
   \caption{Demand scenario over simulation.}
