@@ -142,7 +142,7 @@ where $\ch{CO2}_e$ is equal to total \ch{CO2} emissions over the simulation The 
 
 RL approaches have been used to solve MDP through a trial and error based approach \cite{Sutton2015}. In recent times RL has been extended to incorporate Deep Reinforcement Learning (DRL). DRL relies on deep neural networks to overcome the problems of memory and computational complexity \cite{Arulkumaran2017}. 
 
-We applied the deep deterministic policy gradient (DDPG) DRL algorithm \cite{Hunt2016a} from the Ray RLlib package \cite{Liang2014}. The DDPG algorithm is made up of an actor and critic network. We designed both of these to have two hidden layers, made up of 400 and 300 units per layer. The training batch size was set to 40,000. We chose these parameters as they were the default implementation in Ray RLlib. We trialled a variety of different configurations for number of neurons per layer. To increase speed of computation, we reduced the simulation to run from 2007 to 2017. We chose this number as it would allow for a transition in electricity mix. However, we found that the approach worked well. We trialled the use of two and three layers, as well as varying permutations of 300, 400 and 500 neurons.
+We applied the deep deterministic policy gradient (DDPG) DRL algorithm \cite{Hunt2016a} from the Ray RLlib package \cite{Liang2014}. The DDPG algorithm is made up of an actor and critic network. We designed both of these to have two hidden layers, made up of 400 and 300 units per layer. The training batch size was set to 40,000. We chose these parameters as they were the default implementation in Ray RLlib. We trialled a variety of different configurations for number of neurons per layer. To increase speed of computation, we reduced the simulation to run from 2007 to 2017. We chose this number as it would allow for a transition in electricity mix. However, we found that the approach worked well, irrespective of parameter choice, as shown by Figure \ref{fig:hyperparameter_training}. We trialled the use of two and three layers, as well as varying permutations of 300, 400 and 500 neurons. The parameters trialled are shown by Figure \ref{fig:hyperparameter_training}
 
 
 
@@ -150,7 +150,7 @@ We applied the deep deterministic policy gradient (DDPG) DRL algorithm \cite{Hun
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\columnwidth]{figures/hyperparameter_training.pdf}
+\includegraphics[width=0.65\columnwidth]{figures/hyperparameter_plot_params.pdf}
 \caption{Training with different hyperparameters, displaying the minimum, mean and maximum rewards per episode.}
 \label{fig:hyperparameter_training}
 \end{figure}
