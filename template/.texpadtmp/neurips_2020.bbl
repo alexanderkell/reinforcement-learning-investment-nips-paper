@@ -1,0 +1,70 @@
+\begin{thebibliography}{10}
+
+\bibitem{Kell2020}
+A.~J.~M. Kell, M.~Forshaw, and A.~S. McGough, ``{Long-Term Electricity Market
+  Agent Based Model Validation using Genetic Algorithm based Optimization},''
+  {\em The Eleventh ACM International Conference on Future Energy Systems
+  (e-Energy'20)}, 2020.
+
+\bibitem{Kahrl2011}
+F.~Kahrl, J.~Williams, D.~Jianhua, and H.~Junfeng, ``{Challenges to China's
+  transition to a low carbon electricity system},'' {\em Energy Policy},
+  vol.~39, no.~7, pp.~4032--4041, 2011.
+
+\bibitem{IEA2015}
+IEA, ``{Projected Costs of Generating Electricity},'' p.~215, 2015.
+
+\bibitem{Hunt2016a}
+J.~J. Hunt, A.~Pritzel, N.~Heess, T.~Erez, Y.~Tassa, D.~Silver, and
+  D.~Wierstra, ``{Continuous learning control with deep reinforcement},'' {\em
+  ICLR}, 2016.
+
+\bibitem{Mercure2012}
+J.~F. Mercure, ``{FTT:Power A global model of the power sector with induced
+  technological change and natural resource depletion},'' {\em Energy Policy},
+  vol.~48, pp.~799--811, 2012.
+
+\bibitem{Hall2016}
+L.~M.~H. Hall and A.~R. Buckley, ``{A review of energy systems models in the UK
+  : Prevalent usage and categorisation},'' {\em Applied Energy}, vol.~169,
+  pp.~607--628, 2016.
+
+\bibitem{Hughes2010}
+N.~Hughes and N.~Strachan, ``{Methodological review of UK and international low
+  carbon scenarios},'' {\em Energy Policy}, vol.~38, no.~10, pp.~6056--6065,
+  2010.
+
+\bibitem{Oliveira2018}
+F.~S. Oliveira and M.~L. Costa, ``{Capacity expansion under uncertainty in an
+  oligopoly using indirect reinforcement-learning},'' {\em EJOR}, vol.~267,
+  no.~3, pp.~1039--1050, 2018.
+
+\bibitem{Kazempour2011}
+S.~J. Kazempour, A.~J. Conejo, and C.~Ruiz, ``{Strategic generation investment
+  using a complementarity approach},'' {\em IEEE Transactions on Power
+  Systems}, vol.~26, no.~2, pp.~940--948, 2011.
+
+\bibitem{puterman2014markov}
+M.~L. Puterman, ``Markov decision processes: discrete stochastic dynamic
+  programming,'' 2014.
+
+\bibitem{Sutton2015}
+R.~S. Sutton and A.~G. Barto, ``{An introduction to reinforcement learning},''
+  {\em The MIT Press}, 2015.
+
+\bibitem{Arulkumaran2017}
+K.~Arulkumaran, M.~P. Deisenroth, M.~Brundage, and A.~A. Bharath, ``{A Brief
+  Survey of Deep Reinforcement Learning},'' {\em IEEE Signal Processing
+  Magazine}, pp.~1--16, 2017.
+
+\bibitem{Liang2014}
+E.~Liang, R.~Liaw, P.~Moritz, R.~Nishihara, R.~Fox, K.~Goldberg, J.~E.
+  Gonzalez, M.~I. Jordan, and I.~Stoica, ``{RLlib : Abstractions for
+  Distributed Reinforcement Learning},'' 2014.
+
+\bibitem{Ludig2011}
+S.~Ludig, M.~Haller, E.~Schmid, and N.~Bauer, ``{Fluctuating renewables in a
+  long-term climate change mitigation strategy},'' {\em Energy}, vol.~36,
+  no.~11, pp.~6674--6685, 2011.
+
+\end{thebibliography}
