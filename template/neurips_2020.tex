@@ -74,9 +74,9 @@
 
 \begin{abstract}
 
-A transition from a high-carbon emitting electricity power system to one based on renewables would aid in the mitigation of climate change. Decarbonization of the electricity grid would allow for low-carbon heating, cooling and transport. Investments in renewable energy must be made over a long time horizon to maximise return of investment of these long life power generators. Over these long time horizons, there exist multiple uncertainties, for example in future electricity demand and costs to consumers and investors. 
+A change from a high-carbon emitting electricity power system to one based on renewables would aid in the mitigation of climate change. Decarbonization of the electricity grid would allow for low-carbon heating, cooling and transport. Investments in renewable energy must be made over a long time horizon to maximise return of investment of these long life power generators. Over these long time horizons, there exist multiple uncertainties, for example in future electricity demand and costs to consumers and investors. 
 
-To mitigate for for imperfect information of the future, we use the deep deterministic policy gradient (DDPG) deep reinforcement learning approach to optimize for a low-cost, low-carbon electricity supply using a modified version of the FTT:Power model. In this work, we model the UK and Ireland markets. The DDPG algorithm is able to learn the optimum electricity mix through experience and achieves this between the years of 2017 and 2050. We find that a transition from fossil fuels and nuclear power to renewables, based upon wind, solar and wave would provide a cheap and low-carbon alternative to fossil fuels.
+To mitigate for for imperfect information of the future, we use the deep deterministic policy gradient (DDPG) deep reinforcement learning approach to optimize for a low-cost, low-carbon electricity supply using a modified version of the FTT:Power model. In this work, we model the UK and Ireland markets. The DDPG algorithm is able to learn the optimum electricity mix through experience and achieves this between the years of 2017 and 2050. We find that a change from fossil fuels and nuclear power to renewables, based upon wind, solar and wave would provide a cheap and low-carbon alternative to fossil fuels.
 
 \end{abstract}
 
@@ -87,7 +87,7 @@ To mitigate for for imperfect information of the future, we use the deep determi
 \label{sec:intro}
 
 
-To avoid a catastrophic change in the climate, a transition from a high carbon electricity supply to a low-carbon system is required \cite{Kell2020}. A low carbon electricity supply will aid in the decarbonization of the automotive and heating sectors by allowing for low-carbon electricity to be used in place of oil and gas. Such a transition must be made in a gradual approach to maintain grid reliability \cite{Kahrl2011}.
+To avoid a catastrophic change in the climate, a change from a high carbon electricity supply to a low-carbon system is required \cite{Kell2020}. A low carbon electricity supply will aid in the decarbonization of the automotive and heating sectors by allowing for low-carbon electricity to be used in place of oil and gas.
 
 Renewable energy costs, such as solar and wind energy, have reduced over the last ten years, making them cost-competitive with fossil fuels. These price drops are projected to continue \cite{IEA2015}. The future cost of operating and capital cost of electricity generation and electricity demand, however, remain uncertain over the long-term future. These uncertainties are risks which investors must analyze while making long-term decisions.
 
@@ -207,9 +207,9 @@ Our results show that our investment agent can increase its reward over time, as
 Figure \ref{fig:electricity_generated_plot} displays the results of the reinforcement learning algorithm. Before the black vertical line (2017), the investments made are based upon historical data used by FTT:Power. The reinforcement learning algorithm starts to make investments after the black vertical line. 
 
 
-The historical electricity mix before 2017 is based mainly on fossil fuels: coal, combined cycle gas turbine (CCGT) and oil. Additionally, nuclear is a significant component of the electricity mix before 2009. After reinforcement learning optimizes for LCOE and carbon emissions, a rapid transition occurs from fossil fuel and nuclear to renewable energy. 
+The historical electricity mix before 2017 is based mainly on fossil fuels: coal, combined cycle gas turbine (CCGT) and oil. Additionally, nuclear is a significant component of the electricity mix before 2009. After reinforcement learning optimizes for LCOE and carbon emissions, a rapid change occurs from fossil fuel and nuclear to renewable energy. 
 
-This rapid transition occurs because the RL algorithm does not take into account the technical and timeframe constraints embedded in the unmodified FTT:Power model. However, although it is likely that whilst the transition speed is unrealistic, the electricity mix found by the reinforcement learning algorithm is likely to be optimal, according to the reward function defined in Equation \ref{eq:reward_function}.
+This rapid change occurs because the RL algorithm does not take into account the technical and timeframe constraints embedded in the unmodified FTT:Power model. However, although it is likely that whilst the transition speed is unrealistic, the electricity mix found by the reinforcement learning algorithm is likely to be optimal, according to the reward function defined in Equation \ref{eq:reward_function}. We, therefore, show what the future should look like.
 
 
 
@@ -271,11 +271,11 @@ This mix of renewable electricity generation across Ireland and the UK allows fo
 
 \section{Discussion}
 
-A transition from a high carbon-emitting electricity grid to a low-carbon system is required. In order to achieve this, investments in electricity generators must be made whilst taking into account future uncertainty. In this paper, we have modelled a central agent which makes investment decisions in an uncertain environment to find an optimal low-cost, low-carbon electricity mix. To achieve this, we used the reinforcement learning algorithm, DDPG. The environment is modelled using FTT:Power.
+A change from a high carbon-emitting electricity grid to a low-carbon system is required. In order to achieve this, investments in electricity generators must be made whilst taking into account future uncertainty. In this paper, we have modelled a central agent which makes investment decisions in an uncertain environment to find an optimal low-cost, low-carbon electricity mix. To achieve this, we used the reinforcement learning algorithm, DDPG. The environment is modelled using FTT:Power.
 
 Through this exercise, we are able to see the optimal electricity mix in the UK and Ireland. We found that a mixture of renewable sources such as wind, solar and wave power would meet demand at quarter year intervals, as well as providing a cost-effective and low-carbon system.
 
-A limitation of this work is the fact that the investment algorithm does not take into account the technical and timeframe constraints of transitions between technologies. It is for this reason that the reinforcement learning algorithm is able to make such a rapid transition in 2017. However, we believe that the investment algorithm is able to find a general solution to the problem of investing in a cost-efficient and low-carbon system over a long time horizon. In future work, we would like to model the transition required by incorporating the technical and timeframe constraints for technology switching. This could be undertaken by modifying the reward function to ensure the transition remains within these constraints.
+A limitation of this work is the fact that the investment algorithm does not take into account the technical and timeframe constraints of transitions between technologies. It is for this reason that the reinforcement learning algorithm is able to make such a rapid change in 2017. However, we believe that the investment algorithm is able to find a general solution to the problem of investing in a cost-efficient and low-carbon system over a long time horizon. In future work, we would like to model the transition required by incorporating the technical and timeframe constraints for technology switching. This could be undertaken by modifying the reward function to ensure the transition remains within these constraints.
 
 
 In future work, we would like to increase the number of steps of the FTT:Power model to more adequately model the investment behaviour introduced by the reinforcement learning algorithm. A lower number of simulated time steps leads to an overestimation of the supply of renewables and underestimation of storage and dispatchable technologies \cite{Ludig2011}. In addition, an increase in the number of countries modelled would enable us to see a global picture of how different, interdependent regions may evolve in a new climate of a requirement of low-carbon emissions. This would require an exponentially longer runtime for the reinforcement learning algorithm to converge. This is due to the increased number of decisions that the reinforcement learning algorithm would need to make to account for the different countries. 

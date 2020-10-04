@@ -7,45 +7,45 @@ Database file #2: ftt-power-custom.bib
 Warning--empty journal in IEA2015
 Warning--empty journal in puterman2014markov
 Warning--empty journal in Liang2014
-You've used 14 entries,
+You've used 13 entries,
             1876 wiz_defined-function locations,
-            574 strings with 6119 characters,
-and the built_in function-call counts, 3916 in all, are:
-= -- 387
-> -- 160
+            567 strings with 5952 characters,
+and the built_in function-call counts, 3520 in all, are:
+= -- 344
+> -- 146
 < -- 0
-+ -- 59
-- -- 45
-* -- 280
-:= -- 564
-add.period$ -- 14
-call.type$ -- 14
-change.case$ -- 14
++ -- 54
+- -- 41
+* -- 250
+:= -- 512
+add.period$ -- 13
+call.type$ -- 13
+change.case$ -- 13
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 200
-empty$ -- 354
-format.name$ -- 45
-if$ -- 941
+cite$ -- 16
+duplicate$ -- 181
+empty$ -- 321
+format.name$ -- 41
+if$ -- 844
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 14
-newline$ -- 45
-num.names$ -- 14
-pop$ -- 42
+int.to.str$ -- 13
+missing$ -- 13
+newline$ -- 42
+num.names$ -- 13
+pop$ -- 41
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 136
+skip$ -- 119
 stack$ -- 0
-substring$ -- 281
-swap$ -- 85
+substring$ -- 241
+swap$ -- 74
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 39
-width$ -- 16
-write$ -- 132
+while$ -- 35
+width$ -- 15
+write$ -- 121
 (There were 3 warnings)
