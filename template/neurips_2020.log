@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.22)  4 OCT 2020 10:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.22)  4 OCT 2020 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -775,28 +775,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Underfull \vbox (badness 1178) has occurred while \output is active []
-
  [1
 
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<figures/hyperparameter_plot_params.pdf, id=76, 995.72pt x 568.1225pt>
+<figures/hyperparameter_plot_params.pdf, id=77, 995.72pt x 568.1225pt>
 File: figures/hyperparameter_plot_params.pdf Graphic file (type pdf)
 <use figures/hyperparameter_plot_params.pdf>
 Package pdftex.def Info: figures/hyperparameter_plot_params.pdf  used on input line 153.
 (pdftex.def)             Requested size: 238.49341pt x 136.07477pt.
-<figures/runtime_steps_plot.pdf, id=80, 995.72pt x 568.1225pt>
+<figures/runtime_steps_plot.pdf, id=81, 995.72pt x 568.1225pt>
 File: figures/runtime_steps_plot.pdf Graphic file (type pdf)
 <use figures/runtime_steps_plot.pdf>
 Package pdftex.def Info: figures/runtime_steps_plot.pdf  used on input line 223.
 (pdftex.def)             Requested size: 158.99156pt x 90.71074pt.
-<figures/electricity_generated_plot.pdf, id=81, 853.1875pt x 568.1225pt>
+<figures/electricity_generated_plot.pdf, id=82, 853.1875pt x 568.1225pt>
 File: figures/electricity_generated_plot.pdf Graphic file (type pdf)
 <use figures/electricity_generated_plot.pdf>
 Package pdftex.def Info: figures/electricity_generated_plot.pdf  used on input line 229.
 (pdftex.def)             Requested size: 158.99156pt x 105.86386pt.
+
+Underfull \vbox (badness 1173) has occurred while \output is active []
+
  [3 <./figures/hyperparameter_plot_params.pdf>]
 <figures/emissions_plot.pdf, id=101, 853.1875pt x 568.1225pt>
 File: figures/emissions_plot.pdf Graphic file (type pdf)
@@ -819,18 +819,18 @@ Package rerunfilecheck Info: File `neurips_2020.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
  ) 
 Here is how much of TeX's memory you used:
- 21043 strings out of 480608
- 412610 string characters out of 5903630
- 700667 words of memory out of 5000000
+ 21046 strings out of 480608
+ 412628 string characters out of 5903630
+ 700133 words of memory out of 5000000
  36340 multiletter control sequences out of 15000+600000
- 568921 words of font info for 133 fonts, out of 8000000 for 9000
+ 569051 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,10n,69p,1294b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,10n,69p,1383b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on neurips_2020.pdf (5 pages, 168142 bytes).
+Output written on neurips_2020.pdf (5 pages, 168614 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
+ 181 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
  33 named destinations out of 1000 (max. 500000)
  20558 words of extra memory for PDF output out of 20736 (max. 10000000)
 
