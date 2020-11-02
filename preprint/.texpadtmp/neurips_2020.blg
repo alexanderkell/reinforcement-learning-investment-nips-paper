@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/alexkell/Documents/PhD/Papers/9-ftt-power-rl-investment/preprint/.texpadtmp/neurips_2020.aux
+The style file: ieeetr.bst
+Database file #1: ../library.bib
+Database file #2: ../ftt-power-custom.bib
+Warning--empty journal in IEA2015
+Warning--empty journal in puterman2014markov
+Warning--empty journal in Liang2014
+You've used 13 entries,
+            1876 wiz_defined-function locations,
+            567 strings with 5970 characters,
+and the built_in function-call counts, 3520 in all, are:
+= -- 344
+> -- 146
+< -- 0
++ -- 54
+- -- 41
+* -- 250
+:= -- 512
+add.period$ -- 13
+call.type$ -- 13
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 181
+empty$ -- 321
+format.name$ -- 41
+if$ -- 844
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 13
+newline$ -- 42
+num.names$ -- 13
+pop$ -- 41
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 119
+stack$ -- 0
+substring$ -- 241
+swap$ -- 74
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 35
+width$ -- 15
+write$ -- 121
+(There were 3 warnings)
